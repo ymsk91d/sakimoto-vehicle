@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=7">
+<link rel="stylesheet" href="style.css?v=9">
 <script>document.documentElement.classList.add('has-reveal')</script>
 <!-- アクセス解析: Cloudflare Web Analytics（公開後にトークンを差し込み）
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ここにトークン"}'></script>
@@ -28,11 +28,7 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="index.html">
-      <span class="logo-mark">S</span>
-      <span class="brand-text">
-        <span class="brand-jp">サキモトシャリョウ</span>
-        <span class="brand-en">Sakimoto Vehicle Service</span>
-      </span>
+      <img class="brand-logo" src="logo.png" alt="サキモトシャリョウ｜Car &amp; Motorcycle Rescue" width="210" height="35">
     </a>
     <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" onclick="this.nextElementSibling.classList.toggle('open');var e=this.getAttribute('aria-expanded')==='true';this.setAttribute('aria-expanded',!e)">
       <span></span><span></span><span></span>
@@ -50,8 +46,8 @@
 <!-- ============ ヒーロー ============ -->
 <section class="hero">
   <div class="container hero-inner">
-    <span class="ey reveal rd1">SAKIMOTO VEHICLE SERVICE — 長崎県諫早市</span>
-    <h1 class="reveal rd2">車のこと、<br><span class="hl">なんでも相談。</span><br>サキモトシャリョウまで</h1>
+    <span class="ey reveal rd1">SAKIMOTO VEHICLE SERVICE ／ Car &amp; Motorcycle Rescue</span>
+    <h1 class="reveal rd2">車もバイクも、<br><span class="hl">なんでも相談。</span><br>サキモトシャリョウまで</h1>
     <p class="lead reveal rd3">車検・整備・カスタムから、レッカー・ロードサービスまで。「こんなこと頼める？」も、まずは気軽にひと声。故障やトラブルは24時間対応、代車・レンタカーもご用意しています。</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="https://www.instagram.com/sakimoto_vehicleserv/" target="_blank" rel="noopener">
@@ -61,10 +57,31 @@
       <a class="btn btn-ghost" href="service.html">できることを見る</a>
     </div>
     <div class="hero-badges reveal rd4">
-      <span>🚗 車検・整備・カスタム</span>
-      <span>🛟 故障・トラブル24時間対応</span>
+      <span class="badge-24h">24h 故障・トラブル対応</span>
+      <span>🚗 車・バイク対応</span>
       <span>🔑 代車・レンタカー完備</span>
       <span>📍 諫早市多良見町</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ レスキュー/トラブル対応 ============ -->
+<section class="bg-soft">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="ey">Rescue</span>
+      <h2>こんなときは、すぐお電話を</h2>
+      <p>車・バイクの突然のトラブルも、24時間対応で駆けつけます。まずはお気軽にご連絡ください。</p>
+    </div>
+    <div class="rescue-grid reveal">
+      <div class="rescue-item"><img src="tow_car.png" alt="故障・事故レッカー"><span>故障・事故レッカー</span></div>
+      <div class="rescue-item"><img src="battery.png" alt="バッテリー上がり"><span>バッテリー上がり</span></div>
+      <div class="rescue-item"><img src="tire.png" alt="パンク・タイヤ"><span>パンク・タイヤ</span></div>
+      <div class="rescue-item"><img src="tow_bike.png" alt="バイクのトラブル"><span>バイクのトラブル</span></div>
+      <div class="rescue-item"><img src="phone.png" alt="緊急のご相談"><span>緊急のご相談</span></div>
+    </div>
+    <div style="text-align:center;margin-top:26px">
+      <a class="btn btn-navy" href="tel:080-3988-0066">📞 080-3988-0066 に電話</a>
     </div>
   </div>
 </section>
@@ -102,17 +119,17 @@
     </div>
     <div class="grid grid-3">
       <div class="card reveal">
-        <span class="num">01</span>
+        <img class="card-icon" src="badge24h.png" alt="" width="64" height="64">
         <h3>困ったときの24時間対応</h3>
         <p>急な故障やトラブルも24時間対応。レッカー・ロードサービス（任意保険対応可）で、動けなくなった車もすぐ駆けつけます。</p>
       </div>
       <div class="card reveal">
-        <span class="num">02</span>
+        <img class="card-icon" src="car.png" alt="" width="64" height="64">
         <h3>代車・レンタカー完備</h3>
         <p>修理や車検で車を預ける間も、代車・レンタカーをご用意。日常の足を止めずに安心してお任せいただけます。</p>
       </div>
       <div class="card reveal">
-        <span class="num">03</span>
+        <img class="card-icon" src="staff.png" alt="" width="64" height="64">
         <h3>車のことなんでも窓口</h3>
         <p>「どこに頼めばいいか分からない」も大丈夫。車検・整備からカスタム・買取まで、まとめて相談できる地元の車屋です。</p>
       </div>
@@ -130,10 +147,10 @@
     </div>
     <!-- ▼ 公開後、無料ウィジェット（SnapWidget / LightWidget 等）の自動フィードをここに差し込み予定。
          下記は仮のプレースホルダー（実写真はInstagram投稿が反映されます）。 -->
-    <div class="ig-grid reveal">
-      <a class="ig-tile" href="https://www.instagram.com/sakimoto_vehicleserv/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.5.4 1.1.4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.5.2-1.1.4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.5-.4-1.1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.5-.2 1.1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM18.4 5.6a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg><span>@sakimoto_vehicleserv</span></a>
-      <a class="ig-tile" href="https://www.instagram.com/sakimoto_vehicleserv/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.5.4 1.1.4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.5.2-1.1.4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.5-.4-1.1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.5-.2 1.1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM18.4 5.6a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg><span>整備の様子</span></a>
-      <a class="ig-tile" href="https://www.instagram.com/sakimoto_vehicleserv/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.5.4 1.1.4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.5.2-1.1.4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.5-.4-1.1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.5-.2 1.1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM18.4 5.6a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg><span>入庫車両</span></a>
+    <div class="ig-embeds reveal">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DZIH0vWzMlI/" data-instgrm-version="14"></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DZIFpwYzUMD/" data-instgrm-version="14"></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DZIFJrMk3DO/" data-instgrm-version="14"></blockquote>
     </div>
     <a class="btn btn-primary" href="https://www.instagram.com/sakimoto_vehicleserv/" target="_blank" rel="noopener">Instagramを見る・フォローする</a>
     <p class="ig-note">@sakimoto_vehicleserv ／ 自動車関連サービス・長崎県諫早市</p>
@@ -197,7 +214,7 @@
           <h4>CONTACT</h4>
           <ul>
             <li>諫早市多良見町エリア</li>
-            <li>TEL：<span class="nb">[電話番号]</span></li>
+            <li>TEL：<span class="nb">080-3988-0066</span></li>
             <li>Mail：<span class="nb">akimotosyaryou.032026@outlook.jp</span></li>
             <li>受付 9:00〜19:00（故障は24時間）</li>
           </ul>
@@ -213,7 +230,7 @@
 
 <!-- スマホ追従CTA -->
 <div class="mobile-cta">
-  <a class="m-tel" href="tel:0000000000" aria-label="電話で問い合わせ">
+  <a class="m-tel" href="tel:080-3988-0066" aria-label="電話で問い合わせ">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1z"/></svg>電話する
   </a>
   <a class="m-ig" href="https://www.instagram.com/sakimoto_vehicleserv/" target="_blank" rel="noopener" aria-label="Instagramで問い合わせ">
@@ -245,6 +262,7 @@
 }
 </script>
 
+<script async src="https://www.instagram.com/embed.js"></script>
 <script src="reveal.js?v=1"></script>
 </body>
 </html>

@@ -4,15 +4,17 @@
    ========================================================= */
 
 :root{
-  --navy:#173a5e;
-  --navy-d:#0f2a45;
-  --accent:#ef7d22;
-  --accent-d:#d96a13;
-  --ink:#22262b;
-  --gray:#5f6b76;
-  --line:#e6e9ed;
+  --navy:#1c7a37;
+  --navy-d:#12591f;
+  --accent:#2f9e46;
+  --accent-d:#22813a;
+  --red:#d23a2e;
+  --red-d:#b22a20;
+  --ink:#26302a;
+  --gray:#5f6b62;
+  --line:#e7e7dd;
   --bg:#ffffff;
-  --bg-soft:#f5f7f9;
+  --bg-soft:#f5efdd;
   --radius:14px;
   --maxw:1080px;
   --shadow:0 6px 24px rgba(20,40,60,.08);
@@ -76,7 +78,7 @@ a{color:inherit;text-decoration:none}
   border:2px solid transparent;cursor:pointer;
 }
 .btn:hover{transform:translateY(-1px)}
-.btn-primary{background:var(--accent);color:#fff;box-shadow:0 6px 16px rgba(239,125,34,.28)}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 6px 16px rgba(28,122,55,.28)}
 .btn-primary:hover{background:var(--accent-d);color:#fff}
 .btn-navy{background:var(--navy);color:#fff}
 .btn-navy:hover{background:var(--navy-d);color:#fff}
@@ -102,16 +104,16 @@ section{padding:72px 0}
 }
 .hero::after{
   content:"";position:absolute;right:-120px;top:-80px;width:420px;height:420px;
-  background:radial-gradient(circle,rgba(239,125,34,.35),transparent 70%);
+  background:radial-gradient(circle,rgba(47,158,70,.32),transparent 70%);
 }
 .hero-inner{position:relative;z-index:1;padding:104px 0 92px;max-width:760px}
 .hero .ey{
   display:inline-block;font-size:.74rem;letter-spacing:.2em;font-weight:700;
-  color:#ffd9b0;margin-bottom:18px;
+  color:#d6efd6;margin-bottom:18px;
 }
 .hero h1{font-size:2.5rem;line-height:1.45;margin:0 0 20px;letter-spacing:.02em}
-.hero h1 .hl{color:#ffba7d}
-.hero p.lead{font-size:1.05rem;color:#dce6f0;margin:0 0 34px;max-width:620px;text-wrap:balance}
+.hero h1 .hl{color:#ffe08a}
+.hero p.lead{font-size:1.05rem;color:#e7f1e6;margin:0 0 34px;max-width:620px;text-wrap:balance}
 .hero-actions{display:flex;flex-wrap:wrap;gap:14px}
 .hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
 .hero-badges span{
@@ -183,9 +185,9 @@ section{padding:72px 0}
 /* ---------- CTA バンド ---------- */
 .cta-band{background:linear-gradient(135deg,var(--accent),var(--accent-d));color:#fff;text-align:center}
 .cta-band h2{font-size:1.7rem;margin:0 0 12px}
-.cta-band p{margin:0 0 26px;color:#fff4ec;font-size:1rem;text-wrap:balance}
+.cta-band p{margin:0 0 26px;color:#eef7ef;font-size:1rem;text-wrap:balance}
 .cta-band .hero-actions{justify-content:center}
-.cta-band .btn-ghost{background:#fff;color:var(--accent-d);border-color:#fff}
+.cta-band .btn-ghost{background:#fff;color:var(--navy);border-color:#fff}
 .cta-band .btn-ghost:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
 .cta-band .btn-navy{background:var(--navy)}
 
@@ -196,13 +198,13 @@ section{padding:72px 0}
 
 /* ページ見出し（下層） */
 .page-hero{background:var(--navy);color:#fff;padding:60px 0 56px;text-align:center}
-.page-hero .ey{font-size:.72rem;letter-spacing:.22em;color:#ffd9b0;font-weight:700}
+.page-hero .ey{font-size:.72rem;letter-spacing:.22em;color:#d6efd6;font-weight:700}
 .page-hero h1{font-size:2rem;margin:10px 0 0}
 
 /* FAQ */
 .faq-item{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin-bottom:14px;box-shadow:0 2px 8px rgba(20,40,60,.05)}
 .faq-item h3{margin:0 0 8px;font-size:1.02rem;color:var(--navy);display:flex;gap:10px}
-.faq-item h3::before{content:"Q";color:var(--accent);font-weight:800;font-family:Georgia,serif}
+.faq-item h3::before{content:"Q";color:var(--red);font-weight:800;font-family:Georgia,serif}
 .faq-item p{margin:0;color:var(--gray);font-size:.94rem}
 
 /* 連絡カード */
@@ -340,4 +342,30 @@ section{padding:72px 0}
 .has-reveal .grid .reveal:nth-child(4){transition-delay:.36s}
 @media (prefers-reduced-motion: reduce){
   .has-reveal .reveal{opacity:1!important;transform:none!important;transition:none!important}
+}
+
+
+/* ===== Instagram 公式埋め込み ===== */
+.ig-embeds{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin:8px auto 26px}
+.ig-embeds .instagram-media{min-width:300px!important;max-width:328px!important;margin:0!important}
+@media(max-width:680px){.ig-embeds .instagram-media{min-width:0!important;width:100%!important;max-width:360px!important}}
+
+/* 24h 赤バッジ（差し色・控えめ） */
+.badge-24h{display:inline-flex;align-items:center;gap:6px;background:var(--red);color:#fff;font-weight:800;font-size:.72rem;letter-spacing:.04em;padding:6px 12px;border-radius:999px}
+.hero-badges .badge-24h{border:none}
+
+.brandcard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow);max-width:520px;margin:0 auto}
+.brandcard svg{width:100%;height:auto;display:block}
+
+/* ===== 名刺アイコン配置 ===== */
+.brand-logo{height:36px;width:auto;display:block}
+.card .card-icon{width:60px;height:auto;display:block;margin-bottom:12px}
+.rescue-grid{display:flex;flex-wrap:wrap;gap:18px;justify-content:center}
+.rescue-item{width:150px;text-align:center}
+.rescue-item img{width:88px;height:88px;object-fit:contain;display:block;margin:0 auto 8px}
+.rescue-item span{display:block;font-weight:700;color:var(--navy);font-size:.92rem}
+@media(max-width:560px){
+  .brand-logo{height:30px}
+  .rescue-item{width:42%}
+  .rescue-item img{width:74px;height:74px}
 }
