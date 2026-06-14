@@ -113,7 +113,7 @@ section{padding:72px 0}
 }
 .hero h1{font-size:2.5rem;line-height:1.45;margin:0 0 20px;letter-spacing:.02em}
 .hero h1 .hl{color:#ffe08a}
-.hero p.lead{font-size:1.05rem;color:#e7f1e6;margin:0 0 34px;max-width:620px;text-wrap:balance}
+.hero p.lead{font-size:1.05rem;color:#e7f1e6;margin:0 0 34px;max-width:none;text-wrap:pretty}
 .hero-actions{display:flex;flex-wrap:wrap;gap:14px}
 .hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
 .hero-badges span{
@@ -135,7 +135,7 @@ section{padding:72px 0}
   background:rgba(239,125,34,.12);color:var(--accent);margin-bottom:16px;
 }
 .card .card-ic svg{width:26px;height:26px}
-.card h3{margin:0 0 8px;font-size:1.1rem;color:var(--navy)}
+.card h3{margin:0 0 10px;font-size:1.1rem;color:var(--navy);display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:50px}
 .card p{margin:0;color:var(--gray);font-size:.92rem}
 .card .num{font-family:Georgia,serif;font-size:1.4rem;color:var(--accent);font-weight:700;display:block;margin-bottom:8px}
 
@@ -359,7 +359,7 @@ section{padding:72px 0}
 
 /* ===== 名刺アイコン配置 ===== */
 .brand-logo{height:36px;width:auto;display:block}
-.card .card-icon{width:60px;height:auto;display:block;margin-bottom:12px}
+.card .card-icon{width:48px;height:auto;flex-shrink:0;margin:0}
 .rescue-grid{display:flex;flex-wrap:wrap;gap:18px;justify-content:center}
 .rescue-item{width:150px;text-align:center}
 .rescue-item img{width:88px;height:88px;object-fit:contain;display:block;margin:0 auto 8px}
@@ -376,3 +376,17 @@ section{padding:72px 0}
   .ig-section .ig-embeds{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start;max-width:1060px;margin:8px auto 24px}
   .ig-section .ig-embeds .instagram-media{min-width:0!important;width:100%!important;max-width:100%!important;margin:0!important}
 }
+
+/* 電話番号テキスト表示（ボタンは廃止） */
+.phone-num{font-weight:800;font-size:1.3rem;color:var(--navy);letter-spacing:.02em;margin:0}
+.rescue-tel{font-weight:700;color:var(--navy);font-size:1.05rem;margin:0}
+.rescue-tel strong{font-size:1.25rem;letter-spacing:.02em}
+/* スマホ追従CTAはInstagramのみ（電話ボタン廃止） */
+.mobile-cta .m-ig{flex:1}
+
+/* フッター: ブランド名の右にInstagram */
+.footer-brand .fb-head{display:flex;align-items:center;gap:16px;margin-bottom:4px}
+.footer-brand .fb-head .footer-social{margin-top:0}
+
+/* ごあいさつ本文: 文節で改行・バランス */
+.greeting p{word-break:auto-phrase;text-wrap:pretty;line-height:1.95}
