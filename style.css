@@ -330,9 +330,15 @@ section{padding:72px 0}
 
 /* ===== スクロール演出（reveal） ===== */
 .has-reveal .reveal{opacity:0;transform:translateY(30px);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1);will-change:opacity,transform}
-.has-reveal .reveal.rev-l{transform:translateX(-36px)}
-.has-reveal .reveal.rev-r{transform:translateX(36px)}
-.has-reveal .reveal.is-visible{opacity:1;transform:none}
+.has-reveal .reveal.is-visible{opacity:1;transform:none} 
+.has-reveal .reveal.rev-zoom{transform:scale(.9)}
+.has-reveal .reveal.rev-down{transform:translateY(-30px)}
+.has-reveal .reveal.rev-l{transform:translateX(-44px)}
+.has-reveal .reveal.rev-r{transform:translateX(44px)}
+.has-reveal .rescue-grid .reveal:nth-child(2){transition-delay:.1s}
+.has-reveal .rescue-grid .reveal:nth-child(3){transition-delay:.2s}
+.has-reveal .rescue-grid .reveal:nth-child(4){transition-delay:.3s}
+.has-reveal .rescue-grid .reveal:nth-child(5){transition-delay:.4s}
 .has-reveal .rd1{transition-delay:.06s}
 .has-reveal .rd2{transition-delay:.16s}
 .has-reveal .rd3{transition-delay:.26s}
