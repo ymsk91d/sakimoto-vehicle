@@ -1,6 +1,6 @@
 /* =========================================================
    サキモトシャリョウ  共通スタイル
-   配色: 信頼のネイビー + 親しみのオレンジ / 白ベース
+   配色: 信頼のグリーン + ゴールドのアクセント / クリームベース
    ========================================================= */
 
 :root{
@@ -259,9 +259,9 @@ section{padding:clamp(42px,7vw,72px) 0}
   .nav{
     position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;
     background:#fff;border-bottom:1px solid var(--line);
-    max-height:0;overflow:hidden;transition:max-height .25s ease;
+    max-height:0;overflow:hidden;visibility:hidden;transition:max-height .25s ease,visibility .25s;
   }
-  .nav.open{max-height:360px}
+  .nav.open{max-height:360px;visibility:visible}
   .nav a{width:100%;padding:15px 22px;border-top:1px solid var(--line)}
   .nav .nav-cta{margin:14px 22px;width:calc(100% - 44px);justify-content:center}
 
@@ -350,9 +350,6 @@ section{padding:clamp(42px,7vw,72px) 0}
 .ig-embeds .instagram-media{min-width:0!important;width:100%!important;max-width:330px!important;margin:0 auto!important}
 @media(max-width:680px){.ig-embeds{gap:14px}.ig-embeds .instagram-media{min-width:0!important;width:100%!important;max-width:300px!important}}
 
-/* 24h 赤バッジ（差し色・控えめ） */
-.badge-24h{display:inline-flex;align-items:center;gap:6px;background:var(--red);color:#fff;font-weight:800;font-size:.72rem;letter-spacing:.04em;padding:6px 12px;border-radius:999px}
-.hero-badges .badge-24h{border:none}
 
 .brandcard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow);max-width:520px;margin:0 auto}
 .brandcard svg{width:100%;height:auto;display:block}
