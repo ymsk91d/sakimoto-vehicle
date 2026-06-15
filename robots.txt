@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sakimoto-vehicle.netlify.app/sitemap.xml
+Sitemap: https://ymsk91d.github.io/sakimoto-vehicle/sitemap.xml
