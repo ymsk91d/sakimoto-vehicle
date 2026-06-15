@@ -399,7 +399,7 @@ section{padding:clamp(42px,7vw,72px) 0}
 
 /* ===== レスポンシブ・バランス（改行安定化） 全ページ共通 ===== */
 h1,h2,h3{text-wrap:balance}
-p,li,figcaption,.ig-note,.rescue-item span{text-wrap:pretty;line-break:strict}
+p,li,figcaption,.ig-note,.rescue-item span,.card p,.svc-block p,.faq-item p,.contact-card p,.section-head p,.hero p.lead{text-wrap:pretty;line-break:strict;word-break:auto-phrase}
 
 /* 表示完了時は必ず元位置へ（バリエーション指定の打ち消し対策） */
 .has-reveal .reveal.rev-l.is-visible,.has-reveal .reveal.rev-r.is-visible,.has-reveal .reveal.rev-zoom.is-visible,.has-reveal .reveal.rev-down.is-visible{transform:none}
