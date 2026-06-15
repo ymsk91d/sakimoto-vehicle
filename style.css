@@ -242,8 +242,8 @@ section{padding:clamp(42px,7vw,72px) 0}
 /* =========================================================
    レスポンシブ
    ========================================================= */
-@media(max-width:920px){
-  .grid-3{grid-template-columns:repeat(2,1fr)}
+@media(max-width:1024px){
+  .grid-3{grid-template-columns:1fr}
 }
 @media(max-width:840px){
   body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}  /* 追従CTA分の余白 */
@@ -394,3 +394,10 @@ section{padding:clamp(42px,7vw,72px) 0}
 .rescue-cta{max-width:460px;margin:30px auto 0;text-align:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 22px;box-shadow:var(--shadow)}
 .rescue-cta-ic{width:62px;height:62px;object-fit:contain;display:block;margin:0 auto 10px}
 .rescue-cta-lead{font-weight:700;color:var(--navy);margin:0 0 16px;font-size:1.02rem}
+
+/* ===== レスポンシブ・バランス（改行安定化） 全ページ共通 ===== */
+h1,h2,h3{text-wrap:balance}
+p,li,figcaption,.ig-note,.rescue-item span{text-wrap:pretty;line-break:strict}
+
+/* 表示完了時は必ず元位置へ（バリエーション指定の打ち消し対策） */
+.has-reveal .reveal.rev-l.is-visible,.has-reveal .reveal.rev-r.is-visible,.has-reveal .reveal.rev-zoom.is-visible,.has-reveal .reveal.rev-down.is-visible{transform:none}
