@@ -406,3 +406,6 @@ p,li,figcaption,.ig-note,.rescue-item span{text-wrap:pretty;line-break:strict}
 
 /* フッターの店名をロゴ画像に */
 .footer-logo{height:30px;width:auto;display:block;margin-bottom:6px}
+
+/* 見出し内のサキモトシャリョウをロゴ画像に */
+.h2-logo{display:inline-block;height:1.15em;width:auto;vertical-align:-0.22em;margin-right:.12em}
