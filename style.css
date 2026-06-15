@@ -247,8 +247,8 @@ section{padding:clamp(42px,7vw,72px) 0}
 }
 @media(max-width:840px){
   body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}  /* 追従CTA分の余白 */
-  .hero-inner{padding:46px 22px 42px}
-  .hero-badges{display:grid;grid-template-columns:repeat(2,auto);justify-content:start;justify-items:start;gap:10px}
+  .hero-inner{padding:46px 22px 42px;text-align:center}
+  .hero-badges{display:grid;grid-template-columns:repeat(2,auto);justify-content:center;justify-items:center;gap:10px}
 
   /* ヒーロー/CTAのボタンは縦並び＆全幅で折り返さない */
   .hero-actions{flex-direction:column;align-items:stretch}
@@ -273,7 +273,7 @@ section{padding:clamp(42px,7vw,72px) 0}
   .spec th{font-size:.72rem;letter-spacing:.12em;color:var(--gray);background:none}
   .spec td{font-size:.95rem;padding-bottom:4px}
 
-  .svc-block{flex-direction:column;gap:14px;padding:22px 20px}
+  .svc-block{gap:16px;padding:22px 20px}
   .footer-top{flex-direction:column;gap:24px}
   .map-frame{height:280px}
 
