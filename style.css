@@ -403,3 +403,6 @@ p,li,figcaption,.ig-note,.rescue-item span{text-wrap:pretty;line-break:strict}
 
 /* 表示完了時は必ず元位置へ（バリエーション指定の打ち消し対策） */
 .has-reveal .reveal.rev-l.is-visible,.has-reveal .reveal.rev-r.is-visible,.has-reveal .reveal.rev-zoom.is-visible,.has-reveal .reveal.rev-down.is-visible{transform:none}
+
+/* フッターの店名をロゴ画像に */
+.footer-logo{height:30px;width:auto;display:block;margin-bottom:6px}
