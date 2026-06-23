@@ -20,8 +20,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script>document.documentElement.classList.add('has-reveal')</script>
+<script>try{if(sessionStorage.getItem('pl-nav')==='1')document.documentElement.classList.add('pl-arriving')}catch(e){}</script>
 </head>
 <body>
+
+<div id="page-loader" aria-hidden="true">
+  <img class="pl-logo" src="logo-text.png" alt="">
+  <img class="pl-truck" src="truck.png" alt="" width="1073" height="279" fetchpriority="high">
+</div>
 
 <header class="site-header">
   <div class="container header-inner">
@@ -197,5 +203,6 @@
 </script>
 
 <script src="reveal.js"></script>
+<script src="transition.js"></script>
 </body>
 </html>
