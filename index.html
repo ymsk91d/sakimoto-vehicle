@@ -183,12 +183,9 @@
       <h2>最新の様子はInstagramで</h2>
       <p><span class="nb">作業の様子や入庫車両、</span><span class="nb">カスタム事例などを発信中。</span><span class="nb">気になることはDMからお気軽にどうぞ。</span></p>
     </div>
-    <!-- ▼ 公開後、無料ウィジェット（SnapWidget / LightWidget 等）の自動フィードをここに差し込み予定。
-         下記は仮のプレースホルダー（実写真はInstagram投稿が反映されます）。 -->
-    <div class="ig-embeds reveal">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DZIH0vWzMlI/" data-instgrm-version="14"></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DZIFpwYzUMD/" data-instgrm-version="14"></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DZIFJrMk3DO/" data-instgrm-version="14"></blockquote>
+    <!-- Instagram最新投稿: Behold ウィジェットで自動更新 -->
+    <div class="ig-feed reveal">
+      <behold-widget feed-id="UDHxPAhBlFOzrx3tqiXS"></behold-widget>
     </div>
     <a class="btn btn-primary" href="https://www.instagram.com/sakimoto_vehicleserv/" target="_blank" rel="noopener">Instagramを見る・フォローする</a>
     <p class="ig-note">@sakimoto_vehicleserv ／ 自動車関連サービス・長崎県諫早市</p>
@@ -305,7 +302,7 @@
 }
 </script>
 
-<script async src="https://www.instagram.com/embed.js"></script>
+<script type="module" src="https://w.behold.so/widget.js"></script>
 <script src="reveal.js"></script>
 </body>
 </html>
