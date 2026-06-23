@@ -13,7 +13,7 @@
   if (arrived) {
     try { sessionStorage.removeItem('pl-nav'); } catch (e) {}
     play();
-    var hold = reduce ? 220 : 1300;
+    var hold = reduce ? 160 : 380;
     setTimeout(function () { loader.classList.remove('show'); }, hold);
     setTimeout(function () { loader.classList.remove('run'); root.classList.remove('pl-arriving'); }, hold + 360);
   } else {
@@ -36,7 +36,7 @@
     e.preventDefault();
     try { sessionStorage.setItem('pl-nav', '1'); } catch (e2) {}
     loader.classList.add('show');   // 出発時はカバーのみ（積載車は走らせない＝走行は到着側で1回だけ）
-    setTimeout(function () { window.location = url; }, reduce ? 60 : 340);
+    setTimeout(function () { window.location = url; }, reduce ? 60 : 190);
   });
 
   // bfcache等で戻ったときに残らないように

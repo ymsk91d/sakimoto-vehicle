@@ -349,11 +349,11 @@ section{padding:clamp(42px,7vw,72px) 0}
 .ig-feed{margin:8px auto 26px;max-width:900px;min-height:200px}
 
 /* ===== ページ遷移ローディング（積載車が走り抜ける） ===== */
-#page-loader{position:fixed;inset:0;z-index:10000;background:rgba(255,255,255,.93);display:flex;align-items:center;justify-content:center;overflow:hidden;opacity:0;visibility:hidden;transition:opacity .32s ease}
+#page-loader{position:fixed;inset:0;z-index:10000;background:rgba(255,255,255,.93);display:flex;align-items:center;justify-content:center;overflow:hidden;opacity:0;visibility:hidden;transition:opacity .22s ease}
 #page-loader.show,html.pl-arriving #page-loader{opacity:1;visibility:visible}
 .pl-logo{width:min(62vw,420px);height:auto;opacity:.13;pointer-events:none;user-select:none}
 .pl-truck{position:absolute;top:50%;left:0;width:min(52vw,360px);height:auto;filter:drop-shadow(0 8px 14px rgba(20,40,60,.13));will-change:transform;transform:translate(128vw,-50%)}
-#page-loader.run .pl-truck{animation:truck-run 1.7s cubic-bezier(.42,.03,.58,1) forwards}
+#page-loader.run .pl-truck{animation:truck-run 1.25s cubic-bezier(.42,.03,.58,1) forwards}
 @keyframes truck-run{
   0%{transform:translate(128vw,-50%)}
   18%{transform:translate(66vw,calc(-50% - 5px))}
