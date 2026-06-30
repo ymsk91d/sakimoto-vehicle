@@ -82,21 +82,19 @@
       return;
     }
 
-    // 走行中に裏で新ページを先読み（走り終わりと同時に表示できる）
+    // 新ページの取得をすぐ開始（積載車の走行と"並行"させる＝待ちの足し算を消す）
     try {
       var pf = document.createElement('link');
       pf.rel = 'prefetch'; pf.href = url;
       document.head.appendChild(pf);
     } catch (e3) {}
 
-    // 通常: 積載車を即・走らせる（truck.png はこのページに読込済み＝待ちゼロ）
+    // 積載車を即・走らせる（truck.png はこのページに読込済み＝待ちゼロ）
     loader.classList.add('show', 'run');
-    // 積載車を「最後まで」走らせてから遷移（animationend）。
-    var truck = loader.querySelector('.pl-truck');
-    var fallback = setTimeout(go, mobile ? 1000 : 1450);  // animationendが来ない端末の保険
-    if (truck) {
-      truck.addEventListener('animationend', function () { clearTimeout(fallback); go(); }, { once: true });
-    }
+    // ひと走りだけ見せてから遷移を開始。以降の読み込みは古いページ上で
+    // 走り続ける積載車が覆い隠す（アニメとロードを並列化）。新ページの
+    // 描画が遅いほど積載車が長く走り、速ければ短く切り替わる＝待ちは最小。
+    setTimeout(go, mobile ? 150 : 220);
   });
 
   // bfcache等で戻ったときに、カバー／走行クラスが残らないようにする
