@@ -115,7 +115,7 @@ section{padding:clamp(42px,7vw,72px) 0}
 .hero-bg .hero-bg-mask{position:absolute;inset:0;background:rgba(0,0,0,.5)}
 /* スマホは縦写真1枚（横スライドは隠す） */
 @media(max-width:840px){
-  .hero-bg{background-image:url('heroM.jpg');background-size:cover;background-position:center}
+  .hero-bg{background-image:url('heroM.webp');background-size:cover;background-position:center}
   .hero-bg .hero-slide{display:none}
 }
 /* indexだけ: bodyを透過して背面の写真を見せ、ヒーロー以下はラッパーで覆う */

@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script>document.documentElement.classList.add('has-reveal')</script>
 <script>try{if(sessionStorage.getItem('pl-nav')==='1')document.documentElement.classList.add('pl-arriving')}catch(e){}</script>
@@ -30,22 +30,22 @@
 
 <!-- ヒーロー背景: 写真スライドショー（背面固定・暗フィルター） -->
 <div class="hero-bg" aria-hidden="true">
-  <div class="hero-slide" style="--img:url('hero1.jpg')"></div>
-  <div class="hero-slide" style="--img:url('hero2.jpg')"></div>
-  <div class="hero-slide" style="--img:url('hero3.jpg')"></div>
-  <div class="hero-slide" style="--img:url('hero4.jpg')"></div>
+  <div class="hero-slide" data-img="hero1.webp"></div>
+  <div class="hero-slide" data-img="hero2.webp"></div>
+  <div class="hero-slide" data-img="hero3.webp"></div>
+  <div class="hero-slide" data-img="hero4.webp"></div>
   <div class="hero-bg-mask"></div>
 </div>
 
 <div id="page-loader" aria-hidden="true">
-  <img class="pl-logo" src="logo-text.png" alt="">
-  <img class="pl-truck" src="truck.png" alt="" width="1073" height="279" fetchpriority="high">
+  <img class="pl-logo" src="logo-text.webp" alt="">
+  <img class="pl-truck" src="truck.webp" alt="" width="1073" height="279" fetchpriority="high">
 </div>
 
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="index.html">
-      <img class="brand-logo" src="logo.png" alt="サキモトシャリョウ｜Car &amp; Motorcycle Rescue" width="210" height="35">
+      <img class="brand-logo" src="logo.webp" alt="サキモトシャリョウ｜Car &amp; Motorcycle Rescue" width="210" height="35">
     </a>
     <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" onclick="this.nextElementSibling.classList.toggle('open');var e=this.getAttribute('aria-expanded')==='true';this.setAttribute('aria-expanded',!e)">
       <span></span><span></span><span></span>
@@ -95,25 +95,25 @@
     <ol class="flow-grid">
       <li class="flow-step reveal rev-rise">
         <span class="flow-num">1</span>
-        <div class="flow-img"><img src="flow1.png" alt="出先・遠方で車のトラブルが発生" width="320" height="320" loading="lazy"></div>
+        <div class="flow-img"><img src="flow1.webp" alt="出先・遠方で車のトラブルが発生" width="320" height="320" loading="lazy"></div>
         <h3>出先・遠方でトラブル</h3>
         <p><span class="nb">旅行中や遠出の途中で</span><span class="nb">車が動かなくなっても、</span><span class="nb">まずは落ち着いてご連絡を。</span></p>
       </li>
       <li class="flow-step reveal rev-rise">
         <span class="flow-num">2</span>
-        <div class="flow-img"><img src="flow2.png" alt="電話一本でご連絡" width="320" height="320" loading="lazy"></div>
+        <div class="flow-img"><img src="flow2.webp" alt="電話一本でご連絡" width="320" height="320" loading="lazy"></div>
         <h3>お電話でご連絡</h3>
         <p><span class="nb">お電話一本で状況をお聞きし、</span><span class="nb">すぐに手配します。</span></p>
       </li>
       <li class="flow-step reveal rev-rise">
         <span class="flow-num">3</span>
-        <div class="flow-img"><img src="flow3.png" alt="代車を積んで現地へ駆けつけ" width="320" height="320" loading="lazy"></div>
+        <div class="flow-img"><img src="flow3.webp" alt="代車を積んで現地へ駆けつけ" width="320" height="320" loading="lazy"></div>
         <h3>代車を積んで駆けつけ</h3>
         <p><span class="nb">積載車に代車を載せて、</span><span class="nb">トラブルの現場まで</span><span class="nb">お届けにあがります。</span></p>
       </li>
       <li class="flow-step reveal rev-rise">
         <span class="flow-num">4</span>
-        <div class="flow-img"><img src="flow4.png" alt="代車に乗り換えて旅行を続行" width="320" height="320" loading="lazy"></div>
+        <div class="flow-img"><img src="flow4.webp" alt="代車に乗り換えて旅行を続行" width="320" height="320" loading="lazy"></div>
         <h3>代車で旅行を続行</h3>
         <p><span class="nb">故障車はそのままお預かり。</span><span class="nb">旅程を止めずに、</span><span class="nb">そのままお楽しみいただけます。</span></p>
       </li>
@@ -130,13 +130,13 @@
       <p>車・バイクの突然のトラブルも、24時間対応で駆けつけます。まずはお気軽にご連絡ください。</p>
     </div>
     <div class="rescue-grid">
-      <div class="rescue-item reveal rev-zoom"><img src="tow_car.png" alt="故障・事故レッカー" width="88" height="88" loading="lazy"><span>故障・事故レッカー</span></div>
-      <div class="rescue-item reveal rev-zoom"><img src="battery.png" alt="バッテリー上がり" width="88" height="88" loading="lazy"><span>バッテリー上がり</span></div>
-      <div class="rescue-item reveal rev-zoom"><img src="tire.png" alt="タイヤのパンク" width="88" height="88" loading="lazy"><span>タイヤのパンク</span></div>
-      <div class="rescue-item reveal rev-zoom"><img src="tow_bike.png" alt="バイクのトラブル" width="88" height="88" loading="lazy"><span>バイクのトラブル</span></div>
+      <div class="rescue-item reveal rev-zoom"><img src="tow_car.webp" alt="故障・事故レッカー" width="88" height="88" loading="lazy"><span>故障・事故レッカー</span></div>
+      <div class="rescue-item reveal rev-zoom"><img src="battery.webp" alt="バッテリー上がり" width="88" height="88" loading="lazy"><span>バッテリー上がり</span></div>
+      <div class="rescue-item reveal rev-zoom"><img src="tire.webp" alt="タイヤのパンク" width="88" height="88" loading="lazy"><span>タイヤのパンク</span></div>
+      <div class="rescue-item reveal rev-zoom"><img src="tow_bike.webp" alt="バイクのトラブル" width="88" height="88" loading="lazy"><span>バイクのトラブル</span></div>
     </div>
     <div class="rescue-cta">
-      <img class="rescue-badge reveal rev-roll" src="rescue-badge.png" alt="24時間レスキュー対応" width="1215" height="745" loading="lazy">
+      <img class="rescue-badge reveal rev-roll" src="rescue-badge.webp" alt="24時間レスキュー対応" width="1215" height="745" loading="lazy">
       <p class="rescue-cta-lead">緊急のご相談・レッカーは、お電話で。</p>
       <p class="rescue-cta-note">「行きつけの車屋さんまで運んでほしい」も、お気軽にどうぞ。</p>
       <a id="rescue-call" class="phone-cta" href="tel:080-3988-0066" aria-label="電話でお問い合わせ 080-3988-0066">
@@ -152,7 +152,7 @@
   <div class="container">
     <div class="section-head reveal">
       <span class="ey">What we do</span>
-      <h2><img class="h2-logo reveal rev-l rd2" src="logo.png" alt="サキモトシャリョウ">でできること</h2>
+      <h2><img class="h2-logo reveal rev-l rd2" src="logo.webp" alt="サキモトシャリョウ">でできること</h2>
       <p><span class="nb">車のことならひと通りお任せください。</span><span class="nb">「これってお願いできる？」も大歓迎です。</span></p>
     </div>
     <ul class="service-list reveal">
@@ -178,19 +178,19 @@
   <div class="container">
     <div class="section-head reveal">
       <span class="ey">Reasons</span>
-      <h2><img class="h2-logo reveal rev-l rd2" src="logo.png" alt="サキモトシャリョウ">が選ばれる理由</h2>
+      <h2><img class="h2-logo reveal rev-l rd2" src="logo.webp" alt="サキモトシャリョウ">が選ばれる理由</h2>
     </div>
     <div class="grid grid-3">
       <div class="card reveal rev-zoom">
-        <h3>困ったときの24時間対応<img class="card-icon" src="badge24h.png" alt="" width="44" height="44"></h3>
+        <h3>困ったときの24時間対応<img class="card-icon" src="badge24h.webp" alt="" width="44" height="44"></h3>
         <p>急な故障やトラブルも24時間対応。レッカー・ロードサービス（任意保険対応可）で、動けなくなった車もすぐ駆けつけます。</p>
       </div>
       <div class="card reveal rev-zoom">
-        <h3>代車・レンタカー完備<img class="card-icon" src="car.png" alt="" width="44" height="44"></h3>
+        <h3>代車・レンタカー完備<img class="card-icon" src="car.webp" alt="" width="44" height="44"></h3>
         <p>修理や車検で車を預ける間も、代車・レンタカーをご用意。日常の足を止めずに安心してお任せいただけます。</p>
       </div>
       <div class="card reveal rev-zoom">
-        <h3>車のことなんでも窓口<img class="card-icon" src="staff.png" alt="" width="44" height="44"></h3>
+        <h3>車のことなんでも窓口<img class="card-icon" src="staff.webp" alt="" width="44" height="44"></h3>
         <p>「どこに頼めばいいか分からない」も大丈夫。車検・整備からカスタム・買取まで、まとめて相談できる地元の車屋です。</p>
       </div>
     </div>
@@ -276,7 +276,7 @@
       <div class="footer-brand">
         <div class="fb-head">
           <div>
-            <img class="footer-logo" src="logo.png" alt="サキモトシャリョウ" width="200" height="29">
+            <img class="footer-logo" src="logo.webp" alt="サキモトシャリョウ" width="200" height="29">
             <div class="brand-en">Sakimoto Vehicle Service</div>
           </div>
           <div class="footer-social">
@@ -454,13 +454,18 @@
 (function(){
   var slides = document.querySelectorAll('.hero-bg .hero-slide');
   if (!slides.length) return;
+  // 画像は「表示する直前」に読み込む（初期は1枚目＋次の1枚だけ＝無駄な先読みを省く）
+  function load(s){ if (s && !s.dataset.loaded){ s.style.setProperty('--img', "url('" + s.dataset.img + "')"); s.dataset.loaded = '1'; } }
   var i = Math.floor(Math.random() * slides.length);
+  load(slides[i]);
   slides[i].classList.add('is-active');
   if (slides.length < 2) return;
+  load(slides[(i + 1) % slides.length]);          // 次の1枚を先読み（クロスフェードを滑らかに）
   setInterval(function(){
     slides[i].classList.remove('is-active');
     i = (i + 1) % slides.length;
     slides[i].classList.add('is-active');
+    load(slides[(i + 1) % slides.length]);        // 次に出す1枚を先読み
   }, 6000);
 })();
 </script>
