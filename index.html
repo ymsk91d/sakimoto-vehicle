@@ -182,6 +182,31 @@
   </div>
 </section>
 
+<!-- ============ お客様の声 / Google口コミ ============ -->
+<section class="reviews-sec">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="ey">Reviews</span>
+      <h2>お客様の声・Google口コミ</h2>
+      <div class="rv-summary">
+        <span class="rv-score">5.0</span>
+        <span class="rv-stars-top" aria-label="5つ星評価">★★★★★</span>
+        <span class="rv-count">
+          <svg class="g-ic" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.7-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 5.9-1.1 7.9-2.9l-3.9-3c-1.1.7-2.5 1.2-4 1.2-3.1 0-5.7-2.1-6.6-4.9H1.4v3.1C3.4 21.3 7.4 24 12 24z"/><path fill="#FBBC05" d="M5.4 14.4c-.2-.7-.4-1.4-.4-2.4s.1-1.6.4-2.4V6.5H1.4C.5 8.2 0 10 0 12s.5 3.8 1.4 5.5l4-3.1z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.5 1.8l3.4-3.4C17.9 1.2 15.2 0 12 0 7.4 0 3.4 2.7 1.4 6.5l4 3.1C6.3 6.8 8.9 4.8 12 4.8z"/></svg>
+          Googleクチコミ
+        </span>
+      </div>
+    </div>
+    <div class="reviews-grid" id="reviews"></div>
+    <div style="text-align:center;margin-top:30px">
+      <a class="btn btn-navy" href="https://maps.google.com/?cid=6592741621840236127" target="_blank" rel="noopener">Googleでクチコミを見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- セクション区切り -->
+<div class="sec-divide" aria-hidden="true"><span class="dot"></span></div>
+
 <!-- ============ Instagram ============ -->
 <section>
   <div class="container ig-section" style="text-align:center">
@@ -322,6 +347,59 @@
 </script>
 
 <script type="module" src="https://w.behold.so/widget.js"></script>
+<!-- お客様の声: データを足すだけで増やせます（1件＝オブジェクト1個） -->
+<script>
+(function(){
+  // ▼ ここに口コミを追加・編集（color=アバター色／initial=頭文字／rating=★の数）
+  var REVIEWS = [
+    { name:'Daisuke Yamasaki', initial:'D', color:'#1b7a37', rating:5, date:'6日前',
+      text:'夜遅くに車が動かなくなり、本当にどうしようもない状況でしたが、お電話したらすぐに駆けつけてくださり、心から救われました。レッカー車に代車を積んで持ってきてくださったので、翌日の仕事にも影響が出ず大変助かりました。\n代表の方も気さくで話しやすく、安心してお任せできるお店だと感じました。車検やメンテナンスはここにお世話になりたいと思います。' },
+    { name:'ましゃ', initial:'ま', color:'#e8a13a', rating:5, date:'1週間前',
+      text:'ボディーコーティングをお願いしました。施工前の説明からとても丁寧に説明していただいたので、安心してお任せすることができました。代車も用意していただけたので、施工中も不便なく過ごせて助かりました。仕上がりは想像以上の艶だったので、大満足です。またメンテナンスの際にはお願いしたいと思います。丁寧に作業していただきありがとうございました。' },
+    { name:'DAIKI', initial:'D', color:'#3949ab', rating:5, date:'2か月前',
+      text:'社長の対応がとても好印象で今後、車関係の事はココにお願いしたいと思います😌！文句なしの星5です。ありがとうございました！' },
+    { name:'浦山舜平', initial:'舜', color:'#f4511e', rating:5, date:'3日前',
+      text:'急なお願い事でしたが対応してくれました！次は洗車をお願いしたいと思います！皆さんもぜひ！' },
+    { name:'とら', initial:'と', color:'#7e57c2', rating:5, date:'6日前',
+      text:'車検をお願いしました。丁寧で信頼のできる方です。お世話になりありがとうございました。' }
+  ];
+  var GOOGLE_G = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.7-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 5.9-1.1 7.9-2.9l-3.9-3c-1.1.7-2.5 1.2-4 1.2-3.1 0-5.7-2.1-6.6-4.9H1.4v3.1C3.4 21.3 7.4 24 12 24z"/><path fill="#FBBC05" d="M5.4 14.4c-.2-.7-.4-1.4-.4-2.4s.1-1.6.4-2.4V6.5H1.4C.5 8.2 0 10 0 12s.5 3.8 1.4 5.5l4-3.1z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.5 1.8l3.4-3.4C17.9 1.2 15.2 0 12 0 7.4 0 3.4 2.7 1.4 6.5l4 3.1C6.3 6.8 8.9 4.8 12 4.8z"/></svg>';
+  var box = document.getElementById('reviews');
+  if (!box) return;
+  REVIEWS.forEach(function(r, i){
+    var card = document.createElement('article');
+    card.className = 'rv-card reveal rev-zoom';
+    card.style.transitionDelay = (0.06 * i).toFixed(2) + 's';
+
+    var head = document.createElement('div'); head.className = 'rv-head';
+    var av = document.createElement('span'); av.className = 'rv-avatar';
+    av.style.background = r.color; av.textContent = r.initial;
+    var meta = document.createElement('div'); meta.className = 'rv-meta';
+    var nm = document.createElement('span'); nm.className = 'rv-name'; nm.textContent = r.name;
+    var dt = document.createElement('span'); dt.className = 'rv-date'; dt.textContent = r.date;
+    meta.appendChild(nm); meta.appendChild(dt);
+    var g = document.createElement('span'); g.className = 'rv-g'; g.innerHTML = GOOGLE_G;
+    head.appendChild(av); head.appendChild(meta); head.appendChild(g);
+
+    var stars = document.createElement('div'); stars.className = 'rv-stars';
+    stars.setAttribute('aria-label', r.rating + 'つ星');
+    for (var s = 0; s < 5; s++){
+      var st = document.createElement('span'); st.textContent = '★';
+      if (s < r.rating) st.className = 'on';
+      stars.appendChild(st);
+    }
+
+    var p = document.createElement('p'); p.className = 'rv-text';
+    r.text.split('\n').forEach(function(line, idx){
+      if (idx) p.appendChild(document.createElement('br'));
+      p.appendChild(document.createTextNode(line));
+    });
+
+    card.appendChild(head); card.appendChild(stars); card.appendChild(p);
+    box.appendChild(card);
+  });
+})();
+</script>
 <script src="reveal.js"></script>
 <script src="transition.js"></script>
 </body>

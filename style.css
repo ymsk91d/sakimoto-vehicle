@@ -21,9 +21,9 @@
 }
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;overflow-x:hidden}
+html{scroll-behavior:smooth;overflow-x:clip}
 body{
-  margin:0;overflow-x:hidden;
+  margin:0;overflow-x:clip;
   font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   color:var(--ink);
   background:var(--bg);
@@ -478,3 +478,29 @@ p,li,figcaption,.ig-note,.rescue-item span,.card p,.svc-block p,.faq-item p,.con
 
 /* レスキュー: 24時間対応バナー */
 .rescue-badge{width:100%;max-width:240px;height:auto;display:block;margin:0 auto 12px}
+
+/* ===== お客様の声 / Google口コミ ===== */
+.rv-summary{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:14px;flex-wrap:wrap}
+.rv-summary .rv-score{font-size:2rem;font-weight:800;color:var(--navy);line-height:1}
+.rv-summary .rv-stars-top{color:#f4b400;font-size:1.3rem;letter-spacing:3px}
+.rv-summary .rv-count{display:inline-flex;align-items:center;gap:6px;font-size:.9rem;color:var(--gray);font-weight:600}
+.rv-summary .g-ic{flex-shrink:0}
+.reviews-grid{column-count:2;column-gap:22px;max-width:860px;margin:30px auto 0}
+.rv-card{break-inside:avoid;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin-bottom:22px;box-shadow:0 4px 16px rgba(20,40,30,.06)}
+.rv-head{display:flex;align-items:center;gap:12px}
+.rv-avatar{width:42px;height:42px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.05rem}
+.rv-meta{display:flex;flex-direction:column;line-height:1.3;flex:1;min-width:0}
+.rv-name{font-weight:700;color:var(--ink);font-size:.97rem}
+.rv-date{font-size:.78rem;color:#9aa39a}
+.rv-g{flex-shrink:0;display:flex}
+.rv-stars{margin:11px 0 9px;letter-spacing:2px;font-size:1.02rem;color:#dcdcd2}
+.rv-stars .on{color:#f4b400}
+.rv-text{margin:0;font-size:.92rem;line-height:1.85;color:#444}
+@media (max-width:640px){
+  .reviews-grid{column-count:1;max-width:460px}
+}
+
+/* セクション区切り（line—◆—line） */
+.sec-divide{max-width:560px;margin:-18px auto;padding:0 22px;display:flex;align-items:center;gap:16px}
+.sec-divide::before,.sec-divide::after{content:"";flex:1;height:1px;background:var(--line)}
+.sec-divide .dot{width:8px;height:8px;background:var(--accent);transform:rotate(45deg);border-radius:2px;flex-shrink:0;opacity:.7}
