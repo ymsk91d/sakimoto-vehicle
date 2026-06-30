@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="hero-photo">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,6 +27,15 @@
 -->
 </head>
 <body>
+
+<!-- ヒーロー背景: 写真スライドショー（背面固定・暗フィルター） -->
+<div class="hero-bg" aria-hidden="true">
+  <div class="hero-slide" style="--img:url('hero1.jpg')"></div>
+  <div class="hero-slide" style="--img:url('hero2.jpg')"></div>
+  <div class="hero-slide" style="--img:url('hero3.jpg')"></div>
+  <div class="hero-slide" style="--img:url('hero4.jpg')"></div>
+  <div class="hero-bg-mask"></div>
+</div>
 
 <div id="page-loader" aria-hidden="true">
   <img class="pl-logo" src="logo-text.png" alt="">
@@ -71,6 +80,9 @@
     </div>
   </div>
 </section>
+
+<!-- ヒーロー以下は不透明ラッパーで覆い、背面の写真をヒーローだけに見せる -->
+<div class="below-hero">
 
 <!-- ============ 出張・代車積載レスキューの流れ ============ -->
 <section class="flow-sec">
@@ -127,7 +139,10 @@
       <img class="rescue-badge reveal rev-roll" src="rescue-badge.png" alt="24時間レスキュー対応" width="1215" height="745" loading="lazy">
       <p class="rescue-cta-lead">緊急のご相談・レッカーは、お電話で。</p>
       <p class="rescue-cta-note">「行きつけの車屋さんまで運んでほしい」も、お気軽にどうぞ。</p>
-      <a class="btn btn-navy" href="tel:080-3988-0066">電話でお問い合わせ</a>
+      <a id="rescue-call" class="phone-cta" href="tel:080-3988-0066" aria-label="電話でお問い合わせ 080-3988-0066">
+        <span class="phone-fab-ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1z"/></svg></span>
+        <span class="phone-fab-txt"><small>緊急・レッカーはお電話で</small><b>080-3988-0066</b></span>
+      </a>
     </div>
   </div>
 </section>
@@ -300,6 +315,8 @@
   </div>
 </footer>
 
+</div><!-- /.below-hero -->
+
 <!-- スマホ追従CTA -->
 <div class="mobile-cta">
   <a class="m-tel" href="tel:080-3988-0066" aria-label="電話でお問い合わせ">
@@ -309,6 +326,12 @@
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.5.4 1.1.4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.5.2-1.1.4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.5-.4-1.1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.5-.2 1.1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM18.4 5.6a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg>Instagram
   </a>
 </div>
+
+<!-- PC追従: 電話CTA（右下固定 → RESCUEの電話ボタンが見えたら収まる） -->
+<a class="phone-fab" href="tel:080-3988-0066" aria-label="電話でお問い合わせ 080-3988-0066">
+  <span class="phone-fab-ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1z"/></svg></span>
+  <span class="phone-fab-txt"><small>緊急・レッカーはお電話で</small><b>080-3988-0066</b></span>
+</a>
 
 <!-- 構造化データ: LocalBusiness (AutoRepair) -->
 <script type="application/ld+json">
@@ -398,6 +421,47 @@
     card.appendChild(head); card.appendChild(stars); card.appendChild(p);
     box.appendChild(card);
   });
+})();
+</script>
+<!-- PC追従 電話CTA: RESCUEの電話ボタンが画面に来たら収納（バコッと収まる） -->
+<script>
+(function(){
+  var fab = document.querySelector('.phone-fab');
+  var anchor = document.getElementById('rescue-call');
+  if (!fab || !anchor || !('IntersectionObserver' in window)) return;
+  anchor.classList.add('armed');        // 出現するまで隠しておく
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){            // RESCUE位置に来た → 右下FABは隅へ吸い込み、ここにポンッと出現
+        fab.classList.remove('is-entering');
+        fab.classList.add('is-leaving');
+        anchor.classList.remove('armed','pop');
+        void anchor.offsetWidth;        // アニメ再生のためリフロー
+        anchor.classList.add('pop');
+      } else {                          // 通り過ぎた → ボタンは仕舞い直し、FABがボヨンッと跳ね戻る
+        fab.classList.remove('is-leaving');
+        fab.classList.add('is-entering');
+        anchor.classList.remove('pop');
+        anchor.classList.add('armed');
+      }
+    });
+  }, { threshold: 0.55 });
+  io.observe(anchor);
+})();
+</script>
+<!-- ヒーロー背景スライドショー: 読み込み時ランダム → 約6秒ごとにクロスフェード -->
+<script>
+(function(){
+  var slides = document.querySelectorAll('.hero-bg .hero-slide');
+  if (!slides.length) return;
+  var i = Math.floor(Math.random() * slides.length);
+  slides[i].classList.add('is-active');
+  if (slides.length < 2) return;
+  setInterval(function(){
+    slides[i].classList.remove('is-active');
+    i = (i + 1) % slides.length;
+    slides[i].classList.add('is-active');
+  }, 6000);
 })();
 </script>
 <script src="reveal.js"></script>

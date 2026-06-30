@@ -3,6 +3,8 @@
   var loader = document.getElementById('page-loader');
   if (!loader) return;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // スマホ／reduced-motion は遷移を短く（積載車は出すが保持時間を短縮）
+  var light = reduce || (window.matchMedia && window.matchMedia('(max-width: 840px)').matches);
   var root = document.documentElement;
 
   function play() { loader.classList.add('show', 'run'); }
@@ -13,9 +15,10 @@
   if (arrived) {
     try { sessionStorage.removeItem('pl-nav'); } catch (e) {}
     play();
-    var hold = reduce ? 140 : 190;
-    setTimeout(function () { loader.classList.remove('show'); }, hold);
-    setTimeout(function () { loader.classList.remove('run'); root.classList.remove('pl-arriving'); }, hold + 360);
+    // オーバーレイ（積載車）を見せる時間 → そのあと一気にフェードアウト
+    var visible = reduce ? 120 : (light ? 340 : 560);
+    setTimeout(function () { root.classList.remove('pl-arriving'); loader.classList.remove('show'); }, visible);
+    setTimeout(function () { loader.classList.remove('run'); }, visible + 230);
   } else {
     root.classList.remove('pl-arriving');
   }
@@ -36,7 +39,7 @@
     e.preventDefault();
     try { sessionStorage.setItem('pl-nav', '1'); } catch (e2) {}
     loader.classList.add('show');   // 出発時はカバーのみ（積載車は走らせない＝走行は到着側で1回だけ）
-    setTimeout(function () { window.location = url; }, reduce ? 60 : 140);
+    setTimeout(function () { window.location = url; }, light ? 50 : 140);
   });
 
   // bfcache等で戻ったときに残らないように
