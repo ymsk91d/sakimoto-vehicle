@@ -234,7 +234,12 @@ html.hero-photo .hero h1,html.hero-photo .hero p.lead,html.hero-photo .hero .ey{
 .contact-card{
   background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;
   box-shadow:var(--shadow);text-align:center;
+  display:flex;flex-direction:column;
 }
+/* 3枚のボタンを同じ幅・高さに、カード下端で揃える */
+.contact-card .btn,.contact-card .phone-cta{width:100%;box-sizing:border-box;justify-content:center;min-height:60px;margin:auto 0 0}
+.contact-card .phone-cta{padding:8px 18px}
+.contact-card .phone-cta .phone-fab-ic{width:40px;height:40px}
 .contact-card .c-ic{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
 .contact-card.ig .c-ic{background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af)}
 .contact-card.tel .c-ic{background:var(--navy)}
