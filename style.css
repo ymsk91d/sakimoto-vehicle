@@ -84,6 +84,9 @@ a{color:inherit;text-decoration:none}
 .btn-navy:hover{background:var(--navy-d);color:#fff}
 .btn-ghost{background:#fff;color:var(--navy);border-color:var(--navy)}
 .btn-ghost:hover{background:var(--navy);color:#fff}
+/* Instagram用ボタン（インスタ風グラデ） */
+.btn-ig{background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(221,42,123,.30)}
+.btn-ig:hover{color:#fff;filter:brightness(1.06);box-shadow:0 9px 22px rgba(221,42,123,.42)}
 .btn .ic{width:20px;height:20px;flex-shrink:0}
 
 /* ---------- セクション共通 ---------- */
@@ -206,7 +209,7 @@ html.hero-photo .hero h1,html.hero-photo .hero p.lead,html.hero-photo .hero .ey{
 .map-frame{width:100%;height:340px;border:0;border-radius:var(--radius);margin-top:22px}
 
 /* ---------- CTA バンド ---------- */
-.cta-band{background:linear-gradient(135deg,var(--accent),var(--accent-d));color:#fff;text-align:center}
+.cta-band{background:linear-gradient(135deg,var(--accent),var(--accent-d));color:#fff;text-align:center;padding:clamp(48px,7vw,74px) 0 clamp(64px,9.5vw,100px)}
 .cta-band h2{font-size:clamp(1.35rem,4.4vw,1.7rem);margin:0 0 12px}
 .cta-band p{margin:0 0 26px;color:#eef7ef;font-size:1rem;text-wrap:balance}
 .cta-band .hero-actions{justify-content:center}

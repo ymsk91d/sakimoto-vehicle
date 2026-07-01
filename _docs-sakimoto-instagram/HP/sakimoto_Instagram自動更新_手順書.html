@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>サキモト｜Instagram自動更新 手順書</title>
+<style>
+  :root{ --green:#1f7a3d; --navy:#1f3a5f; --ink:#23272e; --gray:#5b6470; --line:#e3e6ea; --soft:#f6f8f6; --warn:#b8860b; }
+  *{box-sizing:border-box}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic UI","Meiryo",sans-serif;color:var(--ink);line-height:1.85;max-width:820px;margin:0 auto;padding:32px 20px 80px;background:#fff;}
+  h1{font-size:1.6rem;color:var(--green);border-bottom:3px solid var(--green);padding-bottom:12px;line-height:1.4}
+  h2{font-size:1.25rem;color:#fff;background:var(--navy);padding:10px 14px;border-radius:8px;margin-top:38px}
+  h3{font-size:1.05rem;color:var(--navy);margin-top:24px;border-left:5px solid var(--green);padding-left:10px}
+  p,li{font-size:1rem}
+  .lead{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:18px 0}
+  .meta{color:var(--gray);font-size:.92rem}
+  ol{padding-left:1.4em} ul{padding-left:1.3em}
+  ol li{margin:8px 0} ul li{margin:6px 0}
+  .check{list-style:none;padding-left:0}
+  .check li{position:relative;padding-left:30px;margin:9px 0}
+  .check li::before{content:"☐";position:absolute;left:0;top:0;font-size:1.2rem;color:var(--green)}
+  code,.url{font-family:Consolas,"Courier New",monospace;background:#f1f3f5;border:1px solid var(--line);border-radius:5px;padding:2px 6px;font-size:.9rem;word-break:break-all}
+  .urlbox{display:block;background:#0f1720;color:#d6e2ee;padding:14px 16px;border-radius:8px;margin:10px 0;font-family:Consolas,monospace;font-size:.86rem;word-break:break-all;line-height:1.7}
+  .tip{background:#eef7f0;border-left:5px solid var(--green);padding:12px 16px;border-radius:0 8px 8px 0;margin:16px 0}
+  .warn{background:#fff7e6;border-left:5px solid var(--warn);padding:12px 16px;border-radius:0 8px 8px 0;margin:16px 0}
+  .ok{color:var(--green);font-weight:700}
+  table{border-collapse:collapse;width:100%;margin:14px 0}
+  th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;font-size:.95rem}
+  th{background:var(--soft)}
+  .fill{display:inline-block;min-width:220px;border-bottom:1.5px dashed var(--gray);margin-left:6px}
+  hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+  .step-num{display:inline-block;background:var(--green);color:#fff;border-radius:50%;width:26px;height:26px;text-align:center;line-height:26px;font-weight:700;margin-right:6px;font-size:.9rem}
+  @media print{body{padding:0}h2{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+
+<h1>サキモトシャリョウ ｜ Instagram自動更新 セットアップ手順書</h1>
+<p class="meta">Metaアプリ作成＋長期トークン取得（＝あなたの作業）。このトークンが用意できれば、あとのコードは担当が組み込みます。</p>
+
+<div class="lead">
+  <strong>所要時間：約30〜60分</strong><br>
+  難所はパート3〜5（Metaの画面操作）。詰まったら、見えている画面をそのまま共有してください。一緒に進めます。<br>
+  <span class="meta">⚠️ Metaの管理画面は表記やボタン位置がよく変わります。ラベルが少し違っても、意味が近いものを選べばOKです。</span>
+</div>
+
+<h3>用意するもの</h3>
+<ul class="check">
+  <li>スマホのInstagramアプリ（アカウント切替に使用）</li>
+  <li><strong>Facebookアカウント</strong>（Meta開発者サイトのログイン用。無ければ無料作成）</li>
+  <li>PC（ダッシュボード操作はPC推奨）</li>
+  <li>このページを印刷 or 別画面で開いておくと、入力値を控えやすいです</li>
+</ul>
+
+<h2>パート0：用語だけ（読むだけ）</h2>
+<ul>
+  <li><strong>プロアカウント（ビジネス/クリエイター）</strong>：お店用のInstagram。自動取得APIに必須。</li>
+  <li><strong>Metaアプリ</strong>：Instagramからデータを取得する「許可証」。あなたのFacebookアカウントで作ります。</li>
+  <li><strong>アクセストークン</strong>：APIを使う鍵。<strong>長期トークン＝約60日有効</strong>（自動更新は後でコード側が面倒を見ます）。</li>
+</ul>
+<div class="tip"><span class="ok">✅ 自分のお店の投稿を表示するだけ</span>なので、面倒な「アプリ審査（App Review）」は<strong>不要</strong>です（開発モードのまま運用OK）。</div>
+
+<h2>パート1：Instagramを「プロアカウント」に切り替える</h2>
+<p class="meta">※すでにビジネス/クリエイターの方は「パート2」へ。</p>
+<ol>
+  <li>Instagramアプリで自分のプロフィールを開く</li>
+  <li>右上の <strong>≡（三本線）→「設定とプライバシー」</strong></li>
+  <li><strong>「アカウントの種類とツール」</strong> を開く</li>
+  <li><strong>「プロアカウントに切り替える」</strong> をタップ
+     <div class="tip">ここが「<strong>個人用アカウントに切り替える</strong>」になっていれば → <span class="ok">すでにプロです</span>。パート2へ。</div></li>
+  <li><strong>ビジネス</strong>（おすすめ）または <strong>クリエイター</strong> を選ぶ</li>
+  <li>カテゴリ（例：「自動車サービス」「自動車修理店」など）を選んで完了</li>
+</ol>
+<p class="meta">メモ：切替は無料・フォロワーへの通知なし・いつでも個人に戻せます。</p>
+
+<h2>パート2：Meta開発者に登録する（初回のみ）</h2>
+<ol>
+  <li>PCで <code>https://developers.facebook.com</code> を開く</li>
+  <li>右上 <strong>「ログイン」</strong> → お店のFacebookアカウントでログイン</li>
+  <li>初回は <strong>「開発者登録」</strong> を求められる → 電話番号/メール認証、規約に同意</li>
+  <li>上部に <strong>「マイアプリ（My Apps）」</strong> が出れば登録完了</li>
+</ol>
+
+<h2>パート3：Metaアプリを作成する</h2>
+<ol>
+  <li><strong>「マイアプリ」→「アプリを作成（Create App）」</strong></li>
+  <li>「ユースケースを選択」画面：
+    <ul>
+      <li><strong>Instagram</strong> に関する項目があれば選択</li>
+      <li>見当たらなければ <strong>「その他（Other）」→「次へ」→「ビジネス（Business）」</strong></li>
+    </ul>
+  </li>
+  <li>アプリ名（例：<code>sakimoto-instagram-feed</code>）、連絡先メールを入力</li>
+  <li>ビジネスポートフォリオを求められたら、無ければ「後で」でも可</li>
+  <li><strong>「アプリを作成」</strong>（パスワード再入力を求められることあり）</li>
+</ol>
+
+<h2>パート4：Instagram連携を追加する</h2>
+<ol>
+  <li>左メニュー（または「製品を追加」）から <strong>「Instagram」</strong> → <strong>「設定（Set up）」</strong></li>
+  <li><strong>「Instagram API setup with Instagram login」</strong>（Instagramログインでのセットアップ）を選ぶ
+    <div class="tip">「Facebookログイン経由（Graph API）」もありますが、<strong>Instagramログインの方が簡単</strong>なのでこちらを推奨。</div>
+  </li>
+  <li>画面に出る <strong>Instagram app ID / Instagram app secret</strong> はあとで使うので、このページは開いたままに。</li>
+</ol>
+
+<h2>パート5：アカウント接続＆トークン発行</h2>
+<ol>
+  <li>同じページ内の <strong>「アクセストークンを生成（Generate access tokens）」</strong> を探す</li>
+  <li><strong>「アカウントを追加（Add account）」</strong> → <strong>お店のInstagram（プロ）アカウントでログイン</strong></li>
+  <li>権限（プロフィール・メディアの閲覧）を <strong>許可（Allow）</strong></li>
+  <li>戻ると <strong>アクセストークン</strong> が表示される → コピー
+    <ul>
+      <li>「60日間有効」など長期と表示されていれば、それが長期トークン（→パート6へ）</li>
+      <li>「短期（1時間）」のみなら、次の変換を行う</li>
+    </ul>
+  </li>
+</ol>
+<h3>（必要な場合のみ）短期 → 長期トークンへの変換</h3>
+<p>ブラウザのアドレスバーに、<code>{ }</code> を自分の値に置き換えて貼り付け、Enter：</p>
+<span class="urlbox">https://graph.instagram.com/access_token?grant_type=ig_exchange_token&client_secret=<b>{Instagram app secret}</b>&access_token=<b>{短期トークン}</b></span>
+<p>返ってきた JSON の <code>access_token</code> が <strong>長期トークン（約60日）</strong> です。</p>
+
+<h2>パート6：必要な情報を控える（最重要）</h2>
+<div class="warn">⚠️ トークン等は<strong>チャットやメールに平文で貼らない</strong>でください。登録は管理画面のSecret欄に直接行います。</div>
+<ul class="check">
+  <li><strong>長期アクセストークン</strong>：<span class="fill"></span></li>
+  <li><strong>InstagramユーザーID</strong>：<span class="fill"></span><br>
+     <span class="meta">取得方法：アドレスバーに下記を貼ってEnter → 出てきた <code>id</code> がそれ</span>
+     <span class="urlbox">https://graph.instagram.com/me?fields=id,username&access_token=<b>{長期トークン}</b></span></li>
+  <li><strong>Instagram app ID</strong>：<span class="fill"></span></li>
+  <li><strong>Instagram app secret</strong>：<span class="fill"></span></li>
+</ul>
+<div class="tip">この4つが揃えば前準備は完了です。担当に「準備できました」と伝えてください。</div>
+
+<h2>動作確認（任意・やると安心）</h2>
+<p>アドレスバーに下記を貼ってEnter。最近の投稿一覧（JSON）が返れば成功です：</p>
+<span class="urlbox">https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink,thumbnail_url,timestamp&access_token=<b>{長期トークン}</b></span>
+
+<h2>補足・注意</h2>
+<ul>
+  <li><strong>App Review（審査）は不要</strong>：自分の投稿表示はアプリを<strong>開発モードのまま</strong>運用OK。「公開（Live）」にする必要なし。</li>
+  <li><strong>トークンの60日期限</strong>：サイト側の自動処理で期限前に自動更新するので心配不要。</li>
+  <li><strong>ConoHa WING移転後も継続OK</strong>：取得処理はPHPで作るので、移転後はConoHaのcronに実行を移すだけ。アプリ/トークンはそのまま使えます。</li>
+  <li><strong>画面が手順書と違うとき</strong>：ラベルが変わっているだけのことが多いです。スクショを共有いただければその場で案内します。</li>
+</ul>
+
+<hr>
+<h3>この後の流れ（参考）</h3>
+<ol>
+  <li>（あなた）パート1〜6を実施 → トークン等を用意</li>
+  <li>（担当）PHP取得スクリプト＋表示部＋定期実行を実装（別ブランチ）</li>
+  <li>（あなた）トークンをSecretに登録</li>
+  <li>（担当）テスト確認 → 問題なければ本番反映</li>
+  <li>（将来）ConoHa WING移転時、実行をcronへ切替</li>
+</ol>
+
+<p class="meta" style="margin-top:30px;text-align:center">— このページはブラウザの「印刷 → PDFで保存」でPDF化もできます —</p>
+
+</body>
+</html>
