@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ymsk91d.github.io/sakimoto-vehicle/sitemap.xml
+Sitemap: https://sakimoto-vehicle-serv.com/sitemap.xml

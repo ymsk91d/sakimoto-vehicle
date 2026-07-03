@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ymsk91d.github.io/sakimoto-vehicle/</loc>
+    <loc>https://sakimoto-vehicle-serv.com/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ymsk91d.github.io/sakimoto-vehicle/service.html</loc>
+    <loc>https://sakimoto-vehicle-serv.com/service.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ymsk91d.github.io/sakimoto-vehicle/about.html</loc>
+    <loc>https://sakimoto-vehicle-serv.com/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ymsk91d.github.io/sakimoto-vehicle/contact.html</loc>
+    <loc>https://sakimoto-vehicle-serv.com/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

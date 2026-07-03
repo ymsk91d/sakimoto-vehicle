@@ -85,8 +85,8 @@ a{color:inherit;text-decoration:none}
 .btn-ghost{background:#fff;color:var(--navy);border-color:var(--navy)}
 .btn-ghost:hover{background:var(--navy);color:#fff}
 /* Instagram用ボタン（インスタ風グラデ） */
-.btn-ig{background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(221,42,123,.30)}
-.btn-ig:hover{color:#fff;filter:brightness(1.06);box-shadow:0 9px 22px rgba(221,42,123,.42)}
+.btn-ig{background:linear-gradient(100deg,#f77737 0%,#fa5f45 20%,#e1306c 48%,#c13584 70%,#833ab4 100%);background-origin:border-box;color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(131,58,180,.32)}
+.btn-ig:hover{color:#fff;filter:brightness(1.05) saturate(1.05);box-shadow:0 9px 22px rgba(131,58,180,.44)}
 .btn .ic{width:20px;height:20px;flex-shrink:0}
 
 /* ---------- セクション共通 ---------- */
@@ -320,7 +320,7 @@ html.hero-photo .hero h1,html.hero-photo .hero p.lead,html.hero-photo .hero .ey{
   }
   .mobile-cta .m-tel{background:linear-gradient(135deg,#ef5b34,#d8281c);animation:mtel-pulse 2s ease-in-out infinite}
   .mobile-cta .m-tel svg{width:22px;height:22px;animation:mtel-ring 2.2s ease-in-out infinite;transform-origin:center}
-  .mobile-cta .m-ig{background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af)}
+  .mobile-cta .m-ig{background:linear-gradient(100deg,#f77737 0%,#fa5f45 20%,#e1306c 48%,#c13584 70%,#833ab4 100%)}
   .mobile-cta svg{width:20px;height:20px;flex-shrink:0}
 }
 @media(max-width:560px){
