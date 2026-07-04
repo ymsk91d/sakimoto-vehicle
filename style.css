@@ -515,6 +515,25 @@ p,li,figcaption,.ig-note,.rescue-item span,.card p,.svc-block p,.faq-item p,.con
 /* レスキュー: 24時間対応バナー */
 .rescue-badge{width:100%;max-width:240px;height:auto;display:block;margin:0 auto 12px}
 
+/* ===== お問い合わせフォーム ===== */
+.mailform-wrap{max-width:680px;margin-left:auto;margin-right:auto}
+.mailform-title{color:var(--navy);font-size:1.15rem;margin:0 0 6px;text-align:center}
+.mailform-note{color:var(--gray);font-size:.9rem;text-align:center;margin:0 0 22px}
+.mailform{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow)}
+.mailform input[name="_gotcha"]{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.mailform .ff{margin-bottom:16px}
+.mailform .ff-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.mailform label{display:block;font-weight:700;color:var(--ink);font-size:.9rem;margin-bottom:6px}
+.mailform .req{font-size:.66rem;background:var(--red);color:#fff;padding:1px 7px;border-radius:999px;margin-left:6px;vertical-align:2px}
+.mailform input,.mailform select,.mailform textarea{width:100%;box-sizing:border-box;font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:#fcfcfa;color:var(--ink)}
+.mailform input:focus,.mailform select:focus,.mailform textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,158,70,.15);background:#fff}
+.mailform textarea{resize:vertical}
+.ff-submit{text-align:center;margin-top:8px}
+.ff-submit .btn{min-width:240px}
+.ff-privacy{font-size:.78rem;color:var(--gray);margin:12px 0 0}
+.ff-error{background:#fdecea;color:#b3261e;border:1px solid #f5c6c2;border-radius:10px;padding:12px 14px;font-size:.9rem;margin:0 0 16px}
+@media(max-width:560px){ .mailform .ff-row{grid-template-columns:1fr} }
+
 /* ===== お客様の声 / Google口コミ ===== */
 .rv-summary{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:14px;flex-wrap:wrap}
 .rv-summary .rv-score{font-size:2rem;font-weight:800;color:var(--navy);line-height:1}
