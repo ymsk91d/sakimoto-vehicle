@@ -516,23 +516,30 @@ p,li,figcaption,.ig-note,.rescue-item span,.card p,.svc-block p,.faq-item p,.con
 .rescue-badge{width:100%;max-width:240px;height:auto;display:block;margin:0 auto 12px}
 
 /* ===== お問い合わせフォーム ===== */
-.mailform-wrap{max-width:680px;margin-left:auto;margin-right:auto}
-.mailform-title{color:var(--navy);font-size:1.15rem;margin:0 0 6px;text-align:center}
-.mailform-note{color:var(--gray);font-size:.9rem;text-align:center;margin:0 0 22px}
-.mailform{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow)}
-.mailform input[name="_gotcha"]{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
-.mailform .ff{margin-bottom:16px}
-.mailform .ff-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.mailform label{display:block;font-weight:700;color:var(--ink);font-size:.9rem;margin-bottom:6px}
-.mailform .req{font-size:.66rem;background:var(--red);color:#fff;padding:1px 7px;border-radius:999px;margin-left:6px;vertical-align:2px}
-.mailform input,.mailform select,.mailform textarea{width:100%;box-sizing:border-box;font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:#fcfcfa;color:var(--ink)}
-.mailform input:focus,.mailform select:focus,.mailform textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,158,70,.15);background:#fff}
-.mailform textarea{resize:vertical}
-.ff-submit{text-align:center;margin-top:8px}
-.ff-submit .btn{min-width:240px}
-.ff-privacy{font-size:.78rem;color:var(--gray);margin:12px 0 0}
-.ff-error{background:#fdecea;color:#b3261e;border:1px solid #f5c6c2;border-radius:10px;padding:12px 14px;font-size:.9rem;margin:0 0 16px}
-@media(max-width:560px){ .mailform .ff-row{grid-template-columns:1fr} }
+.mailform-wrap{max-width:660px;margin:0 auto}
+.mailform-title{color:var(--navy);font-size:clamp(1.2rem,3.6vw,1.4rem);margin:0 0 8px;text-align:center;letter-spacing:.02em}
+.mailform-note{color:var(--gray);font-size:.92rem;text-align:center;margin:0 0 26px;text-wrap:balance}
+.mailform{background:#fff;border:1px solid var(--line);border-radius:18px;padding:34px 30px;box-shadow:0 12px 36px rgba(20,40,30,.08)}
+.mailform input[name="_gotcha"]{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none}
+.mailform .ff{margin-bottom:18px}
+.mailform .ff-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.mailform label{display:block;font-weight:700;color:var(--navy);font-size:.9rem;margin-bottom:8px;letter-spacing:.02em}
+.mailform .req{display:inline-block;font-size:.64rem;font-weight:700;background:var(--red);color:#fff;padding:2px 8px;border-radius:999px;margin-left:8px;vertical-align:2px;letter-spacing:.08em}
+.mailform input,.mailform select,.mailform textarea{width:100%;box-sizing:border-box;font:inherit;font-size:1rem;padding:14px 16px;border:1.5px solid var(--line);border-radius:12px;background:#faf9f4;color:var(--ink);transition:border-color .15s,box-shadow .15s,background .15s}
+.mailform input::placeholder,.mailform textarea::placeholder{color:#adb2ab}
+.mailform input:hover,.mailform select:hover,.mailform textarea:hover{border-color:#ccd3c8}
+.mailform input:focus,.mailform select:focus,.mailform textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,158,70,.16);background:#fff}
+.mailform select{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:44px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235f6b62' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 15px center;background-size:18px}
+.mailform textarea{resize:vertical;min-height:132px;line-height:1.7}
+.ff-submit{margin-top:26px;text-align:center}
+.ff-submit .btn{width:100%;max-width:340px;padding:16px 24px;font-size:1.05rem;box-shadow:0 8px 20px rgba(28,122,55,.24)}
+.ff-privacy{font-size:.78rem;color:var(--gray);margin:14px 0 0}
+.ff-error{background:#fdecea;color:#b3261e;border:1px solid #f5c6c2;border-radius:12px;padding:13px 16px;font-size:.9rem;margin:0 0 18px;text-align:center}
+@media(max-width:560px){
+  .mailform{padding:24px 18px}
+  .mailform .ff-row{grid-template-columns:1fr;gap:0}
+  .mailform .ff-row .ff{margin-bottom:18px}
+}
 
 /* ===== お客様の声 / Google口コミ ===== */
 .rv-summary{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:14px;flex-wrap:wrap}
